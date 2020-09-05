@@ -2,19 +2,34 @@ Version 1.2
 
 # Introduction
 
-This document describes a technical task for candidates applying for Sr Java Software Engineering role at [redacted]. This is programming task to be completed by you at home. We recommend that you time box your activity and priorities based on the highest value added delivery items. 
-We want to get a feeling how you name, structure and organise your code as well as how you prioritise. 
+This document describes a technical task for candidates applying for Sr Java
+Software Engineering role at [redacted]. This is programming task to be
+completed by you at home. We recommend that you time box your activity and
+priorities based on the highest value added delivery items.
+
+We want to get a feeling how you name, structure and organise your code as
+well as how you prioritise.
+
 
 # Technical task
 
-The requirement are detailed below. Your tasks is to implement as many as you can in a certain amount of time. We are not asking you to spend days on this exercise. Your application will still be evaluated even if not all requirements are implemented. If you decided to skip or change some requirements please explain your decision.
+The requirement are detailed below. Your tasks is to implement as many as you
+can in a certain amount of time. We are not asking you to spend days on this
+exercise. Your application will still be evaluated even if not all
+requirements are implemented. If you decided to skip or change some
+requirements please explain your decision.
 
-The tasks is to create a REST API interface which allows client applications to query data from a datastore.
+The tasks is to create a REST API interface which allows client applications
+to query data from a datastore.
 
-Note: As we are running on OS.X, we will not be able to test your project in a Windows environment. 
+Note: As we are running on OS.X, we will not be able to test your project in a
+Windows environment. 
 
 ## Application
-The goal is to develop a (RESTful) API application, lets call it "Search Facade", written in Java demonstrating use of version 8 features.
+
+The goal is to develop a (RESTful) API application, lets call it "Search
+Facade", written in Java demonstrating use of version 8 features.
+
 - Should compile and run under JVM "8".
 - Use Gradle build tool version "4.9" or another build tool of your choice.
 - Provide the command line to execute the project
@@ -24,8 +39,13 @@ The goal is to develop a (RESTful) API application, lets call it "Search Facade"
 ## REST API
 
 The REST API has to run on port `6868`
-Implement a `GET /:resource/:id` endpoint where `:id` is value of the `id` attribute of relevant resource and `resource` is an entry from the sample data.
-Implement `GET /:resource/search` endpoint. It should require a parameter `filter`, for example:
+
+Implement a `GET /:resource/:id` endpoint where `:id` is value of the `id`
+attribute of relevant resource and `resource` is an entry from the sample
+data.
+
+Implement `GET /:resource/search` endpoint. It should require a parameter
+`filter`, for example:
 
 ```
 filter1 = ...
@@ -35,7 +55,8 @@ filter3 = ...
 
 `GET /events/search?filter=filter1&filter=filter2&filter=filter3`
 
-In SQL it would be something like `SELECT * FROM events WHERE filter1 AND filter2 AND filter3`
+In SQL it would be something like `SELECT * FROM events WHERE filter1 AND
+filter2 AND filter3`
 
 The filter is a JSON object:
 
@@ -89,14 +110,17 @@ idRange = `{ "attribute": "id", "operator": "eq", "range": { "from": 2, "to": 4 
 `?filter=idRange`
 
 ## Database
-Our preference is a NOSQL database like MongoDB but for simplicity you can choose whatever database works for you.
+Our preference is a NOSQL database like MongoDB but for simplicity you can
+choose whatever database works for you.
+
 - Provide a shell script to launch the database server on port `27777` as Docker container.
 - Provide a way to upload all JSONs from sample data folder.
 
 
 ## Submit
-Please create a private GitHub repository and push your changes to it. Add the following collaborators to the repo: 
-[redacted] and [redacted]
+
+Please create a private GitHub repository and push your changes to it. Add the
+following collaborators to the repo: [redacted] and [redacted]
 
 
 Good luck and see you in the next round!

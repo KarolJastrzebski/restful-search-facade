@@ -1,0 +1,12 @@
+server:
+  port: 6868
+
+spring:
+  data:
+    mongodb:
+      port: 27777
+      host: localhost
+      username: root
+      password: example
+      database: example_db
+      authentication-database: admin
